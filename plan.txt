@@ -1,0 +1,89 @@
+1. How do university rankings change over time?
+
+	Take datasets of different years and compare data between different year
+
+2. Which characteristics of universities contribute most to good rankings, or to large changes in the ranking position?
+
+	Analyse individual criteria and what characteristics contribute to good ranking:
+
+	Number of notable alumni (inventions, prizes, ...) relative to total number of 		students
+
+	Number of alumni in high ranking positions
+
+	Ratios: students and professors, female to male ratio, student to resources (labs, 	computers, ...)
+
+	correlate age of university with rankings?
+
+	budget for conducting research
+
+	research output (how many papers are published per annum?)
+	
+	
+	
+	public / private universities
+	
+	amount of payment
+	
+
+
+3. How do these characteristics correlate with characteristics of cities or countries in which the university is located?
+
+	average out rankings of universities grouped by countries or continents over time 	compare averages
+	
+	GDP
+
+	HDI
+	
+	Rain dates per year
+
+	universities per country
+
+	universities per person in a country
+
+	corruptions perception index in a country
+
+	public expenditure
+
+
+4. Are there predictors for increases or decreases in the rankings?
+
+	Changes in the above mentioned characteristics
+
+
+Datasets:
+
+	Uni ranking: https://www.kaggle.com/mylesoneill/world-university-rankings
+	
+	World population on diverse metrics: https://sedac.ciesin.columbia.edu/data/		collection/gpw-v3
+
+	GDP Growth: https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG
+
+	Weather data: https://earthdata.nasa.gov/
+
+	Corruption in public sector: https://data.worldbank.org/indicator/IQ.CPA.TRAN.XQ
+
+	HDI: https://databank.worldbank.org/reports.aspx?source=1147&series=UNDP.HDI.XD
+
+
+	
+	
+
+Step 1: get the data
+- ranking data of universities
+- which faculties does a university have
+- number of students per study field
+- size of city where university lies
+- salaries of professors
+- tuition fees
+- budget for academic education and research of location (per capita)
+
+
+Top 2000 universities 2019/2020 https://cwur.org/2019-2020.php
+
+
+
+Step 2: explore the data
+- find out about (cor)relations between a variable and the ranking by calculating correlation coefficients, and plotting the data in an appropriate manner
+
+Step 3: model the data
+- once possible predictors for increases or decreases of rankings were identified, we should check how the predictors interact with the rankings (start to build up simple machine learning models)
