@@ -1,6 +1,8 @@
+% DOPP Exercise 3 Work Plan
+% Backé Julian, Russo Dominik, Salzer Tobias, Singh Ajayvir
+
 <!-- compile with: pandoc -o plan.pdf plan.md -->
 
-# DOPP UE 3 Work Plan
 
 ## 1. How do university rankings change over time?
 
@@ -38,7 +40,6 @@ Analyse individual criteria in dataset and what characteristics contribute most 
 
 *   analyse criteria mentioned above
 
-\newpage
 
 ## Plan
 
