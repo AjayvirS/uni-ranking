@@ -1,0 +1,36 @@
+1. agenda
+2. data sources
+3. questions
+4. graphs
+5. machine learning
+
+
+1. public expenditure
+
+2. percentage gdp for uni
+
+3. inhabitant uni ratio
+
+4. hdi - ranking
+
+5. cpi
+
+6. ranking by region
+
+7. heatmap and correlation with all features of cwur
+
+8. uni staff stats
+
+9. uni students stats
+
+
+
+1. Julian: Introduction
+2. Julian:  Agenda
+3. Ajay: Data acquisition
+4. Tobi: Preprocessing, struggles
+5. Tobi: Univie vs TU
+6. Ajay: CWUR Overview
+7. Julian: Boxplot 
+8. Julian: Expenditure / number unis
+
