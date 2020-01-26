@@ -58,7 +58,7 @@ todo
 
 \section*{\large{How do these characteristics correlate with characteristics of cities or countries in which the university is located?}}
 
-The results of this section are summed up in Figure 1. For example, we obtained that a country's expenditure on education (in percent of the GDP) leads to a higher mean score of this country's universities. However, a country's expenditures is not indicator on how good its best university will rank. We also found out that the number of universities per inhabitant as well as the Human Development Index (HDI) could be indicators for how good a country's universities will perform on average in rankings. It should be noted that with these characteristics it is possible to distinguish the mean ranks of different countries, but it is not possible to separate good and bad universities within the very same country
+The results of this section are summed up in Figure 1. For example, we obtained that a country's expenditure on education (in percent of the GDP) leads to a higher mean score of this country's universities (see Figure 2). However, a country's expenditures is not indicator on how good its best university will rank. We also found out that the number of universities per inhabitant as well as the Human Development Index (HDI) could be indicators for how good a country's universities will perform on average in rankings. It should be noted that with these characteristics it is possible to distinguish the mean ranks of different countries, but it is not possible to separate good and bad universities within the very same country
 
 \begin{figure}[H]
 \caption{Which local properties influence a country's university scores?}
@@ -77,7 +77,12 @@ The results of this section are summed up in Figure 1. For example, we obtained 
 \end{tabular}
 \end{center}
 \end{figure}
-
+\begin{figure}[H]
+	\centering
+	\caption{The influence of educational expenditure (in percentage of GDP) on university scores}
+	\includegraphics[width=0.75\linewidth]{graphs/exp_mean_all}
+	
+\end{figure}
 
 \section*{\large{Are there predictors for increases or decreases in the rankings?}}
 We constructed two models predicting a university's score. Once we considered only the number of students, the student staff ratio, the percentage of female students and the percentage of international students. For this model a so called Random Forest algorithm was used. In our tests, our model an average error of 3.38 score points, which is a rather good model. When using additioal properties of the university's location country like the HDI or the data about expenditure for education, our model worked slightly worse. This makes sense because within a country, the universities might have very different scores. However, these additional numbers are the same for each university in the same country, so that they are not suitable for distinguishing different universities in the same country.
