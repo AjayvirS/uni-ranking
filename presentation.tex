@@ -4,9 +4,11 @@
 \usefonttheme{serif}
 \title{\textbf{University ranks}}
 \author{\textsc{Back\'{e}} Julian, \textsc{Salzer} Tobias, \textsc{Singh} Ajayvir\\
-Group 19}
+Group 03}
 \date{}
 \usepackage{stmaryrd}
+\usepackage{makecell}
+
 
 
 \begin{document}
@@ -14,29 +16,11 @@ Group 19}
 \linespread{1.2}
 
 
-\begin{frame} 
-\frametitle{Objective}
-Analysis, visualisation and interpretation of data concerning university rankings.
-\end{frame}
+
 
 \begin{frame} 
-\frametitle{Workflow}
-
-\begin{enumerate}
-\item \textbf{Problem Definition} (Workplan)
-
-\item \textbf{Data acquisition and loading}
-
-\item \textbf{Data Exploration}
-
-\item \textbf{Data Modelling}
-\end{enumerate}
-
-\end{frame}
-
-\begin{frame} 
-\frametitle{Problem Definition}
-
+\frametitle{Agenda / Questions}
+TO DO: Nur das nehmen was wir wirklich beantworten in der presentation?
 \begin{itemize}
 	\item How do university rankings change over time? 
 	
@@ -49,6 +33,19 @@ Analysis, visualisation and interpretation of data concerning university ranking
 \end{itemize}
 
 \end{frame}
+
+\begin{frame} 
+\frametitle{Workflow}
+
+\begin{enumerate}
+\item \textbf{Data acquisition and preprocessing}
+
+\item \textbf{Data Exploration -- with results}
+
+\item \textbf{Data Modelling -- with results}
+\end{enumerate}
+\end{frame}
+
 
 \begin{frame} 
 \frametitle{Data acquisition and loading}
@@ -72,6 +69,10 @@ Analysis, visualisation and interpretation of data concerning university ranking
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Preprocessing, struggles}
+TOBI
+\end{frame}
 
 \begin{frame}
 \frametitle{Data Exploration - Univie vs TU Vienna}
@@ -110,12 +111,42 @@ Analysis, visualisation and interpretation of data concerning university ranking
 \end{frame}
 
 \begin{frame}
-\frametitle{Data exploration - Ranking deviation over years (2012-2015)}
+\frametitle{Data exploration\\
+Ranking differences over years (2012-2015)}
 \begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{graphs/world_rank_diff_bp}
 \end{figure}
 \end{frame}
+
+\begin{frame}
+\frametitle{Data exploration - Expenditure for education}
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{graphs/exp_mean_all}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Data exploration - Other results}
+\begin{tabular}{|c|c|c|} \hline
+\textbf{independent variable} & \textbf{dependent variable} & \textbf{impact} \\ \hline
+\makecell{expenditures for education \\ (all institutions)} & mean score of country & YES \\ \hline
+\makecell{expenditures for education \\ (all institutions)} & max. score of country & NO \\ \hline
+\makecell{expenditures for education \\ (higher institutions)} & mean score of country & YES \\ \hline
+\makecell{expenditures for education \\ (higher institutions)} & max. score of country & NO \\ \hline
+\makecell{number of universities} & mean score of country & SLIGHT \\ \hline
+\makecell{number of inhabitants} & mean score of country & NO \\ \hline
+\makecell{univerisites per inhabitant} & mean score of country & YES \\ \hline
+\makecell{HDI} & mean score of country & YES \\ \hline
+\makecell{corruption} & mean score of country & todo \\ \hline
+
+
+\end{tabular}
+
+\end{frame}
+
+
 
 
 

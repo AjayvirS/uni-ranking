@@ -32,5 +32,5 @@
 5. Tobi: Univie vs TU
 6. Ajay: CWUR Overview
 7. Julian: Boxplot 
-8. Julian: Expenditure / number unis
-
+8. Julian: Expenditure
+9. Tobi: ML
