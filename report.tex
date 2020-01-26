@@ -25,7 +25,7 @@
 \usepackage{amsmath} % Required for some math elements 
 \usepackage{enumitem}
 \usepackage{hyperref}
-\usepackage[left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
+\usepackage[left=20mm,right=20mm,top=25mm,bottom=25mm]{geometry}
 \usepackage{makecell}
 \usepackage{float}
 
@@ -59,7 +59,12 @@ For each survey, there are different characteristics contributing to the univers
 
 For the times survey, we were able to predict the scores and therefore also the rankings with pretty good accuracy. As input features for our model we used number of students, student-staff-ratio, percentage of international students and percentage of female students.
 
-TODO cwur and shanghai
+For the CWUR dataset, the resulting rank of a country is a transformation of other characteristics contained in the dataset, such as broad impact, publications, alumn employment, etc..
+The exact methodology of these characteristics can be found \href{https://cwur.org/methodology/world-university-rankings.php}{ \textbf{here}}.
+Consequently, it made sense to analyse which of these characteristics contribute most to good rankings. 
+We were able to conclude, that the characteristics broad impact, publications and influence were among the top characteristics to contribute to good rankings, even though they were weighted the least, as mentioned in the above linked methodology.
+
+
 
 \section*{\large{How do these characteristics correlate with characteristics of cities or countries in which the university is located?}}
 
@@ -90,7 +95,11 @@ The results of this section are summed up in Figure 1. For example, we obtained 
 \end{figure}
 
 \section*{\large{Are there predictors for increases or decreases in the rankings?}}
-We constructed two models predicting a university's score. Once we considered only the number of students, the student staff ratio, the percentage of female students and the percentage of international students. For this model a so called Random Forest algorithm was used. In our tests, our model an average error of 3.38 score points, which is a rather good model. When using additioal properties of the university's location country like the HDI or the data about expenditure for education, our model worked slightly worse. This makes sense because within a country, the universities might have very different scores. However, these additional numbers are the same for each university in the same country, so that they are not suitable for distinguishing different universities in the same country.
+We constructed two models predicting a university's score: 
+
+For one we considered some inherent characteristics of the university: number of students, the student staff ratio, the percentage of female students and the percentage of international students. For this model the Random Forest algorithm was used. In our tests, our model an average error of 3.38 score points, which implies a rather good model. 
+
+For the second model, we calculated the mean rank by country, in an attempt to predict the average rank of a country, given the country's HDI. Using HDI as input, it was possible to construct a model within an error of 1.46 score. But it can be argued that the model struggles in predicting the actual ranks, and is more of an indicator of how well all universities of a country fare, given its HDI.
 
 
 
