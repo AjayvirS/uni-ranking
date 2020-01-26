@@ -4,20 +4,17 @@
 \usefonttheme{serif}
 \title{\textbf{University ranks}}
 \author{\textsc{Back\'{e}} Julian, \textsc{Salzer} Tobias, \textsc{Singh} Ajayvir\\
-Group 03}
+Group 19}
 \date{}
 \usepackage{stmaryrd}
 \usepackage{makecell}
 
-
-
+%Julian
 \begin{document}
 \maketitle
 \linespread{1.2}
 
-
-
-
+%Julian
 \begin{frame} 
 \frametitle{Agenda / Questions}
 TO DO: Nur das nehmen was wir wirklich beantworten in der presentation?
@@ -34,8 +31,10 @@ TO DO: Nur das nehmen was wir wirklich beantworten in der presentation?
 
 \end{frame}
 
+%Julian
 \begin{frame} 
 \frametitle{Workflow}
+
 
 \begin{enumerate}
 \item \textbf{Data acquisition and preprocessing}
@@ -46,34 +45,45 @@ TO DO: Nur das nehmen was wir wirklich beantworten in der presentation?
 \end{enumerate}
 \end{frame}
 
-
+%Ajay
 \begin{frame} 
 \frametitle{Data acquisition and loading}
 \begin{itemize}
-	\item \textbf{Center for World University Rankings} (CWUR) $\rightarrow$ Main data source
-	\item \textbf{Academic Ranking of World Ranking Universities} $\rightarrow$ by ShanghaiRanking, contains rankings from 2005
-	\item \textbf{World University Rankings } $\rightarrow$ by Times Higher Education, contains inherent characterstics of universities such as number of students, ratio, ...
-	\item \textbf{Public Expenditure} $\rightarrow$ by National Center of for Education Statistics, for correlation with characteristics of country
+\item \textbf{Center for World University Rankings} (CWUR) $\rightarrow$ Main data source
+\item \textbf{Academic Ranking of World Ranking Universities} $\rightarrow$ by ShanghaiRanking, contains rankings from 2005
+\item \textbf{World University Rankings } $\rightarrow$ by Times Higher Education, contains inherent characterstics of universities such as number of students, ratio, ...
+\item \textbf{Public Expenditure} $\rightarrow$ by National Center of for Education Statistics, for correlation with characteristics of country
 
 \end{itemize}
 
 \end{frame}
 
+%Ajay
 \begin{frame}
 \frametitle{Data acquisition and loading}
 \begin{itemize}
-	\item \textbf{Human Development Index} $\rightarrow$  by United Nations Development Programme, for correlation with HDI
+\item \textbf{Human Development Index} $\rightarrow$  by United Nations Development Programme, for correlation with HDI
 \item \textbf{Countries By Region}  $\rightarrow$  by US Government, for data analysis of rankings by region
 \item \textbf{Corruption Perception Index} $\rightarrow$  by Transparency International, for correlation with corruption
 \end{itemize}
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Preprocessing, struggles}
-TOBI
+%Tobi
+\begin{frame} 
+\frametitle{Challenges}
+
+\begin{itemize}
+\item Rankings throughout the surveys very different - performance of ML-algorithms dependent on chosen survey.
+
+\item University names and country names are not standardized - makes it difficult to merge the datasets.
+
+\item In general, very messy data: missing values stored in many forms (NAN, '?', -,...), a lot of typos, random symbols attached to numbers,...
+\end{itemize}
+
 \end{frame}
 
+%Tobi
 \begin{frame}
 \frametitle{Data Exploration - Univie vs TU Vienna}
 \begin{figure}
@@ -91,6 +101,7 @@ TOBI
 
 \end{frame}
 
+%Ajay
 \begin{frame}
 \frametitle{Data exploration - Heatmap for overview}
 \begin{figure}[h]
@@ -101,6 +112,7 @@ TOBI
 
 \end{frame}
 
+%Ajay
 \begin{frame}
 \frametitle{Data exploration - World rank vs  other characteristics}
 \begin{figure}
@@ -110,23 +122,27 @@ TOBI
 
 \end{frame}
 
+%Julian
 \begin{frame}
-\frametitle{Data exploration\\
-Ranking differences over years (2012-2015)}
+\frametitle{Data exploration - Ranking deviation over years (2012-2015)}
 \begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{graphs/world_rank_diff_bp}
 \end{figure}
 \end{frame}
 
+
+%Julian
 \begin{frame}
 \frametitle{Data exploration - Expenditure for education}
 \begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{graphs/exp_mean_all}
 \end{figure}
+
 \end{frame}
 
+%Julian
 \begin{frame}
 \frametitle{Data exploration - Other results}
 \begin{tabular}{|c|c|c|} \hline
@@ -139,8 +155,7 @@ Ranking differences over years (2012-2015)}
 \makecell{number of inhabitants} & mean score of country & NO \\ \hline
 \makecell{univerisites per inhabitant} & mean score of country & YES \\ \hline
 \makecell{HDI} & mean score of country & YES \\ \hline
-\makecell{corruption} & mean score of country & todo \\ \hline
-
+\makecell{corruption} & mean score of country & NO \\ \hline
 
 \end{tabular}
 
@@ -149,23 +164,44 @@ Ranking differences over years (2012-2015)}
 
 
 
-
+%Tobi
 \begin{frame} 
-\frametitle{Some results}
+\frametitle{Predicting times-score}
 
-Hypothesis: ...
+\begin{enumerate}
+\item \textbf{Setup:}
 
-[Graph]
+\begin{enumerate}
+\item only top 200 universities from times-survey considered
+\item predict times-score using number of students, student-staff-ratio, percentage of international students and percentage of female students.
+\item grid-search over different ML-algorithm and parameters
+\end{enumerate}
 
-Conclusion--: ...
+\item best ML-algorithm: random forest
+
+\item Mean squared error: 3.4
+\end{enumerate}
+
 \end{frame}
 
+%Tobi
+\begin{frame}
+\frametitle{Actual scores vs predicted scores}
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{graphs/pred_uniFeatures_unirank}
+\end{figure}
 
+\end{frame}
 
+%Ajay
 \begin{frame} 
-\frametitle{Conclusion}
+\frametitle{Final thoughts}
 \begin{itemize}
-\item ...
+
+\item Working with messy data can be pretty tedious
+
+\item Preprocessing and data cleaning essential for meaningful results
 
 \end{itemize}
 
